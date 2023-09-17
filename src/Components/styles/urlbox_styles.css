@@ -15,7 +15,9 @@ form{
     font-family: 'Courier New', Courier, monospace;
     border-radius: 0;
 }
-
+#url-box::placeholder{
+    color: #ffc107;
+}
 #search-button{
     width: 100px;
     height: 35px;
