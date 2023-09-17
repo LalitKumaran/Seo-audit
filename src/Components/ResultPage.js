@@ -10,11 +10,13 @@ export function ResultPage({ result }) {
       <h4>EveryThing You Need to Know</h4>
       <h4>
         <strong>
-          <u>{result.url}</u>
+          <u>
+            <h4 id="url">{result.url}</h4>
+          </u>
         </strong>
       </h4>
       <br />
-      <ExportPdf result={result}/>
+      <ExportPdf result={result} />
       <br />
       <div className="container m-4">
         <div className="row justify-content-center">
@@ -100,7 +102,9 @@ export function ResultPage({ result }) {
           </div>
           <div className="col-md-6 col-lg-3">
             <div className="box-contents">
-              <p className="values">{result.flesch_kincaid_readability_index}</p>
+              <p className="values">
+                {result.flesch_kincaid_readability_index}
+              </p>
               <p>Flesch Kincaid Readability Index</p>
             </div>
           </div>
@@ -112,7 +116,9 @@ export function ResultPage({ result }) {
           </div>
           <div className="col-md-6 col-lg-3">
             <div className="box-contents">
-              <p className="values">{result.description_to_content_consistency}</p>
+              <p className="values">
+                {result.description_to_content_consistency}
+              </p>
               <p>Description to Content Consistency</p>
             </div>
           </div>
@@ -133,7 +139,7 @@ export function ResultPage({ result }) {
                 Duplicate title tags are bad for SEO. They confuse search
                 engines and make it harder to rank for specific keywords.
               </p>
-              { !result.duplicate_title ? (
+              {!result.duplicate_title ? (
                 <GiConfirmed className="text-success" />
               ) : (
                 <MdCancel className="text-danger" />
@@ -147,7 +153,7 @@ export function ResultPage({ result }) {
                 Duplicate meta descriptions are bad for SEO. They confuse search
                 engines and make it harder to rank for specific keywords.
               </p>
-              { !result.duplicate_description ? (
+              {!result.duplicate_description ? (
                 <GiConfirmed className="text-success" />
               ) : (
                 <MdCancel className="text-danger" />
@@ -161,7 +167,7 @@ export function ResultPage({ result }) {
                 Duplicate content is bad for SEO. It confuses search engines and
                 makes it harder to rank for specific keywords.
               </p>
-              { !result.duplicate_content ? (
+              {!result.duplicate_content ? (
                 <GiConfirmed className="text-success" />
               ) : (
                 <MdCancel className="text-danger" />
@@ -175,7 +181,7 @@ export function ResultPage({ result }) {
                 The size of your page is too large. This can negatively impact
                 your page load speed and user experience.
               </p>
-              { result.size ? (
+              {result.size ? (
                 <GiConfirmed className="text-success" />
               ) : (
                 <MdCancel className="text-danger" />
@@ -189,7 +195,7 @@ export function ResultPage({ result }) {
                 Your page does not have a cache control header. This can
                 negatively impact your page load speed and user experience.
               </p>
-              { result.cache_control ? (
+              {result.cache_control ? (
                 <GiConfirmed className="text-success" />
               ) : (
                 <MdCancel className="text-danger" />
@@ -200,9 +206,10 @@ export function ResultPage({ result }) {
             <div className="checkbox-contents">
               <p className="title">Seo Friendly Url</p>
               <p className="description">
-              These checks ensure that your page is following basic search engine optimization advice
+                These checks ensure that your page is following basic search
+                engine optimization advice
               </p>
-              { result.seo_friendly_url ? (
+              {result.seo_friendly_url ? (
                 <GiConfirmed className="text-success" />
               ) : (
                 <MdCancel className="text-danger" />
@@ -211,7 +218,11 @@ export function ResultPage({ result }) {
           </div>
         </div>
       </div>
-      <h4 className="m-2"><u><b>Speed Insights</b></u></h4>
+      <h4 className="m-2">
+        <u>
+          <b>Speed Insights</b>
+        </u>
+      </h4>
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-md-6 col-lg-3">

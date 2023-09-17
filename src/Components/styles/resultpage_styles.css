@@ -17,6 +17,24 @@
     border: none;
 }
 
+@media (max-width: 950px) {
+    #url {
+      width: 600px;
+      overflow-wrap: break-word;
+    }
+}
+@media (max-width: 750px) {
+    #url {
+      width: 400px;
+      overflow-wrap: break-word;
+    }
+}
+@media (max-width: 450px) {
+    #url {
+      width: 200px;
+      overflow-wrap: break-word;
+    }
+}
 .resultPage {
     display: flex;
     flex-direction: column;
