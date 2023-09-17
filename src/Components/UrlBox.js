@@ -22,7 +22,7 @@ export function UrlBox() {
     if (isValidUrl) {
       setIsLoading(true);
       await axios
-        .post("https://dataforseo-api-production.up.railway.app/", { url: url })
+        .get("https://dataforseo-api-production.up.railway.app/", { url: url })
         .then((res) => {
           console.log("Response:",res.data);
           setResult(res.data);
