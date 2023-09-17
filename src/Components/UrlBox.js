@@ -21,8 +21,13 @@ export function UrlBox() {
     e.preventDefault();
     if (isValidUrl) {
       setIsLoading(true);
+      const headers = {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE',
+        'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+      };
       await axios
-        .get(`https://dataforseo-api-production.up.railway.app/${encodeURIComponent(url)}`,)
+        .get(`https://dataforseo-api-production.up.railway.app/${encodeURIComponent(url)}`,{ headers })
         .then((res) => {
           console.log("Response:",res.data);
           setResult(res.data);
