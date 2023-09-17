@@ -50,7 +50,7 @@ export function UrlBox() {
               id="url-box"
               value={url}
               onChange={(e) => setUrl(e.target.value)}
-              aria-placeholder="Enter the URL"
+              placeholder="Enter the URL"
               required
             />
           </div>
